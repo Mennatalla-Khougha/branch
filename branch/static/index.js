@@ -114,7 +114,7 @@ document.getElementById('form').addEventListener('submit', async (event) => {
   const data = Object.fromEntries(formData);
   const method = event.submitter.value;
   
-  let url = 'http://127.0.0.1:8000/api/branches/';
+  let url = 'https://branch-zeta.vercel.app/api/branches/';
   
   if (method !== 'POST') {
     url += `${branchNo}/`;
