@@ -140,6 +140,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://branch-4x1im7f8f-mennatalla-khoughas-projects.vercel.app/"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://branch-4x1im7f8f-mennatalla-khoughas-projects.vercel.app/"
+# ]
+
+CORS_ALLOW_ALL_ORIGINS = True
