@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Branch</title>
+</head>
+<body>
+  <main>
+    <form id="form">
+      {% csrf_token %}
+      <div class="form_header">
+        <div></div>
+        <h1>
+          Branch/Store/Cashier
+        </h1>
+        <div class="form_buttons">
+          <button type="submit" value="POST" id="create">
+            <i class="fa fa-plus-circle"></i>
+          </button>
+          <button type="submit" value="PUT" id="save">
+            <i class="fa fa-save"></i>
+          </button>
+          <button type="submit" value="DELETE" id="delete">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </div>
+      </div>
+      <div id="form_body">
+        <div class="branch">
+          <label for="branch_id">Branch</label>
+          <input type="text" name="branch_id" id="branch_id" disabled>
+        </div>
+        <div class="custom">
+          <label for="custom_no">Custom No.</label>
+          <input type="text" name="custom_no" id="custom_no" value="0">
+        </div>
+          <label for="arabic_name">Arabic Name</label>
+          <input type="text" name="arabic_name" id="arabic_name" dir="rtl">
+          <label for="arabic_description">Arabic Description</label>
+          <input type="text" name="arabic_description" id="arabic_description" dir="rtl">
+          <label for="english_name">English Name</label>
+          <input type="text" name="english_name" id="english_name">
+          <label for="english_description">English Description</label>
+          <input type="text" name="english_description" id="english_description">
+          <label for="notes">Note</label>
+          <textarea name="notes" id="notes"></textarea>
+          <label for="address">Address</label>
+          <textarea name="address" id="address"></textarea>
+      </div>
+
+    </form>
+  </main>
+  <footer>
+    <button id="first">
+      <i class="fa fa-angle-double-left" style="font-size:36px"></i>
+    </button>
+    <button id="prev">
+      <i class="fa fa-angle-left" style="font-size:36px"></i>
+    </button>
+    <p id="number">page number</p>
+    <button id="next">
+      <i class="fa fa-angle-right" style="font-size:36px"></i>
+    </button>
+    <button id="last">
+      <i class="fa fa-angle-double-right" style="font-size:36px"></i>
+    </button>
+  </footer>
+  <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+  position: relative;
+  display: flex;
+  padding: 0%;
+  margin: 0%;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.form_header {
+  background-color: rgb(0, 166, 255);
+  width: full;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+
+}
+.form_buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.form_buttons button {
+  margin-left: 20px;
+  color: white;
+  background-color: rgb(0, 166, 255);
+  border: none;
+  padding: 0;
+  font-size: 26px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 166, 255);
+  padding: 10px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+
+footer button {
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: white;
+  border: none;
+  color: rgb(0, 166, 255);
+  padding: 0%;
+}
+
+footer button:disabled {
+  color: rgb(128, 210, 255);
+}
+
+main {
+  margin-top: 50px;
+  width: 80%;
+}
+
+
+#form_body{
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 15px;
+}
+
+#form_body div{
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.custom {
+  grid-column: 3 / span 2;
+}
+
+.branch {
+  grid-column: span 2;
+}
+
+input{
+  width: 100%;
+  border: 1px solid rgb(124, 131, 135);
+  box-sizing: border-box;
+  height: 30px;
+}
+
+textarea{
+  width: 100%;
+  border: 1px solid rgb(124, 131, 135);
+  resize: none;
+  height: 100px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#form {
+  margin-bottom: 100px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+  }
+
+  #form_body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #form_body .branch {
+    grid-column: span 2;
+  }
+
+  #form_body .custom {
+    grid-column: 3 / span 1;
+  }
+
+  #form_body div {
+    display: flex;
+    flex-direction: column;
+  }
+
+#form_body label, #form_body input, #form_body textarea {
+  grid-column: span 3;
+}
+}
