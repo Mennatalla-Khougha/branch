@@ -46,7 +46,7 @@ async function retrieveData() {
   if (pageNo === 0) {
     return { count: 0 };
   }
-  const data = await fetch(`https://branch-5s60315ry-mennatalla-khoughas-projects.vercel.app/api/branches/?page=${pageNo}`);
+  const data = await fetch(`https://branch-zeta.vercel.app//api/branches/?page=${pageNo}`);
   if (!data.ok) {
     throw new Error('Failed to retrieve data');
   }
